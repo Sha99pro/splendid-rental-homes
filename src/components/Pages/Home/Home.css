@@ -1,0 +1,65 @@
+.home-page {
+    width: 100%;
+}
+
+.hero{
+    height:450px;
+    width: 100%;
+    background-size : cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.dots{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    gap: 8px;
+}
+
+.dot span{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.dots .active-dot{
+    background-color: blue;
+}
+
+.search-section{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.search-box{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.features{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.feature-grid{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card{
+    width:250px;
+    padding:20px;
+    border: 1px solid #ddd;
+}
+
+.cta{
+    text-align:center;
+    padding:40px 20px;
+}
+
