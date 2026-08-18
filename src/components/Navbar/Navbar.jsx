@@ -7,7 +7,7 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="brand">
                 <img
-                    classname="brand-logo"
+                    className="brand-logo"
                     src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
                     alt="Home Logo" />
 
