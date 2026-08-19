@@ -57,7 +57,7 @@ export default function Home(){
 
                         <select>
                             <option>Property Type</option>
-                            <option>Individual House</option>
+                            <option>Single Family Home</option>
                             <option>Townhome</option>
                             <option>Condo</option>
                             <option>Apartment</option>
@@ -68,6 +68,15 @@ export default function Home(){
                             <option>2 Bedrooms</option>
                             <option>3 Bedrooms</option>
                             <option>4 Bedrooms</option>
+                        </select>
+
+                        <select>
+                            <option>Bathrooms</option>
+                            <option>1 Bathrooms</option>
+                            <option>1.5 Bathrooms</option>
+                            <option>2 Bathrooms</option>
+                            <option>2.5 Bathrooms</option>
+                            <option>3 Bathrooms</option>
                         </select>
 
                         <button>Search</button>

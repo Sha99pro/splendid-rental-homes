@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
 
-export default function TenantLogin(){
+export default function LandlordLogin(){
     return(
         <div>
-            <h1>Tenant Login</h1>
-            <p> Sign in to manage your rental applications</p>
+            <h1>Landlord Login</h1>
+            <p> Sign in to manage your rental properties</p>
 
             <form>
                 <label>Email</label>
@@ -20,12 +20,14 @@ export default function TenantLogin(){
                     placeholder="Enter your password"
                 />
 
-                <button type="submit">
-                    Login
-                </button>
+                <Link to="/landlord-dashboard">
+                    <button type="submit">
+                        Login
+                    </button>
+                </Link>
             </form>
             <p> New to Splendid Rental Homes?
-                <Link to="/signup">Create an account</Link>
+                <Link to="signup">Create an account</Link>
             </p>
         </div>
     )

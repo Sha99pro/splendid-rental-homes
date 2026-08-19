@@ -25,7 +25,7 @@ export default function Navbar() {
                         Login
                     </button>
                     <div className="login-menu">
-                        <Link to="landlord-login">Loandlord Login</Link>
+                        <Link to="landlord-login">Landlord Login</Link>
                         <Link to="tenant-login">Tenant Login</Link>
                     </div>
                 </div>
