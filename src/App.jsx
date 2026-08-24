@@ -10,6 +10,10 @@ import LandlordDashboard from "./components/Pages/Dashboard/LandlordDashboard/La
 import AddProperty from "./components/Pages/Dashboard/Add Property/AddProperty";
 import TenantDashboard from "./components/Pages/Dashboard/TenantDashboard/TenantDashboard";
 import PropertyDetails from "./components/Pages/PropertyDetails/PropertyDetails";
+import ApplicationForm from "./components/Pages/Applications/ApplicationForm/ApplicationForm";
+import ApplicationDetails from "./components/Pages/Applications/ApplicationDetails";
+import ScheduleATour from "./components/Pages/ScheduleATour/ScheduleATour";
+import TourConfirmation from "./components/Pages/TourConfirmation/TourConfirmation";
 
 
 
@@ -32,7 +36,10 @@ function App() {
         <Route path="/landlord-dashboard" element={<LandlordDashboard/>}/>
         <Route path="/add-property" element={<AddProperty/>}/>
         <Route path="/tenant-dashboard" element={<TenantDashboard/>}/>
-        
+        <Route path="/application-form" element={<ApplicationForm/>}/>
+        <Route path="/application-details/:id" element={<ApplicationDetails/>}/>
+        <Route path="/schedule-tour/:id" element={<ScheduleATour/>}/>
+        <Route path="/tour-confirmation" element={<TourConfirmation/>}/>
 
       </Routes>
 

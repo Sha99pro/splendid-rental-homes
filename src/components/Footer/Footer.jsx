@@ -20,7 +20,7 @@ export default function Footer(){
 
                 <div>
                     <h3>FOR LANDLORDS</h3>
-                    <Link to="/list-property">List a Property</Link>
+                    <Link to="/landlord-login">List a Property</Link>
                     <Link to="/landlord-login">Landlord Login</Link>
                 </div>
 

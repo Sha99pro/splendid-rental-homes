@@ -83,9 +83,9 @@ export default function Home(){
                     </div>
             </section>
 
-            <section classname="features">
+            <section className="features">
                 <h2>Why choose Spendid Rental Homes</h2>
-                <div classname="feature-grid">
+                <div className="feature-grid">
                     <div className="feature-card">
                         <h3>Comfortable Homes</h3>
                         <p>Simple homes designed for comfortable family living</p>
@@ -100,7 +100,7 @@ export default function Home(){
                     </div>
                 </div>
             </section>
-            <section classname = "cta">
+            <section className = "cta">
                 <h2>Ready to Find your New Home?</h2>
                 <p> Explore available rental properties today</p>
 

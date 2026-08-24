@@ -534,6 +534,7 @@ export default function Properties(){
     const[rent, setRent] = useState("All");
     const[homeType, setHomeType] = useState("All");
     const[bedrooms, setBedrooms] = useState("All");
+    const[bathrooms, setBathrooms] = useState("All");
 
     const filteredProperties = properties.filter((property) => {
 
@@ -602,6 +603,18 @@ export default function Properties(){
                 <option value="2">2 Bedrooms</option>
                 <option value="3">3 Bedrooms</option>
                 <option value="4"> 4 Bedrooms</option>
+            </select>
+
+            
+            <select
+                value={bathrooms}
+                onChange={(event)=>setBathrooms(event.target.value)}
+            >
+                <option value="All">Filter by bath</option>
+                <option value="1.5">1.5 bath</option>
+                <option value="2"> 2 bath</option>
+                <option value="2.5">2.5 bath</option>
+                <option value="3">3 bath</option>
             </select>
                 
             </div>

@@ -1,5 +1,5 @@
 import {properties} from "../Properties/Properties"
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function PropertyDetails(){
@@ -63,8 +63,8 @@ export default function PropertyDetails(){
             <section className="property-amenities">
                 <h2>Amenities</h2>
                 <ul>
-                    {property.amenities.map((amenity) => (
-                        <li> {amenity} </li>
+                    {property.amenities.map((amenity, index) => (
+                        <li key={index}> {amenity} </li>
                     ))}
                 </ul>
             </section>
@@ -84,11 +84,11 @@ export default function PropertyDetails(){
                 </div>
             </section>
 
-            <Link to="/apply">
+            <Link to="/application-form">
                 <button>APPLY NOW</button>
             </Link>
 
-            <button>SCHEDULE A TOUR</button>
+            <Link to={`/schedule-tour/${property.id}`}>Schedule A Tour</Link>
 
 
              {/* Contact Landlord*/}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { applications } from "../../../Data/Applications"
 
 export default function LandlordDashboard(){
     return(
@@ -37,66 +38,25 @@ export default function LandlordDashboard(){
                     <thead>
                         <tr>
                             <th>Applicant</th>
-                            <th>Property</th>
                             <th>Date</th>
                             <th>Status</th>
+                            <th>Property</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>David</td>
-                            <td>115 Cobble Rd O'Fallon, MO 63366</td>
-                            <td>Aug 11 2026</td>
-                            <td>
-                                <span className="pending-badge">Pending</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Vijay</td>
-                            <td>124 Intrepid Ave Wentzville, MO 65536</td>
-                            <td>Aug 13 2026</td>
-                            <td>
-                                <span className="approved-badge">Approved</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Sharukh</td>
-                            <td>100 Dry Brook Rd Wentzville, MO 63356</td>
-                            <td>Aug 14 2026</td>
-                            <td>
-                                <span className="pending-badge">Pending</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Michael</td>
-                            <td>204 N Main St Ofallon, MO 63366</td>
-                            <td>Aug 10 2026</td>
-                            <td>
-                                <span className="reject-badge">Rejected</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Emily</td>
-                            <td>100 Grenache Blanc Blvd Saint Peters, MO 63105</td>
-                            <td>Aug 12 2026</td>
-                            <td>
-                                <span className="approved-badge">Approved</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                                <td>Patrick</td>
-                                <td>4000 Brady Way Lake Saint Louis, MO 63367</td>
-                                <td>Aug 9 2026</td>
+                        {applications.map((application) =>(
+                            <tr key={application.id}>
+                                <td>{application.firstName} {application.lastName}</td>
+                                <td>{application.startDate}</td>
+                                <td>{application.status}</td>
+                                <td>{application.property}</td>
                                 <td>
-                                    <span className="approved-badge">Approved</span>
+                                    <Link to={`/application-details/${application.id}`}>View Application</Link>
                                 </td>
-                        </tr>
+                            </tr>
+                        ))}
                     </tbody>
                </table>
 

@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
 export default function Navbar() {
+
+    const[showLogin, setShowLogin] = useState(false);
+    const navigate= useNavigate();
+    
     return (
 
         <nav className="navbar">
@@ -12,7 +18,7 @@ export default function Navbar() {
                     alt="Home Logo" />
 
                 <div className="brand-text">
-                    <span>Splendid Rental Homes</span>
+                    <span><strong>Splendid Rental Homes</strong></span>
                     <small>Find a place to call Home</small>
                 </div>
             </div>
@@ -21,14 +27,17 @@ export default function Navbar() {
                 <Link to="/" >Home</Link>
                 <Link to="/properties"> Properties</Link>
                 <div className="login-dropdown">
-                    <button className="login-button">
+                    <button onClick={() =>setShowLogin(!showLogin)}>
                         Login
                     </button>
-                    <div className="login-menu">
-                        <Link to="landlord-login">Landlord Login</Link>
-                        <Link to="tenant-login">Tenant Login</Link>
-                    </div>
+                    {showLogin &&(
+                        <div className="login-menu">
+                            <Link to="landlord-login">Landlord Login</Link>
+                            <Link to="tenant-login">Tenant Login</Link>
+                      </div>
+                    )}
                 </div>
+                <button onClick={() =>navigate("/login")}>Logout</button>
             </div>
         </nav>
     )
