@@ -14,7 +14,9 @@ import ApplicationForm from "./components/Pages/Applications/ApplicationForm/App
 import ApplicationDetails from "./components/Pages/Applications/ApplicationDetails";
 import ScheduleATour from "./components/Pages/ScheduleATour/ScheduleATour";
 import TourConfirmation from "./components/Pages/TourConfirmation/TourConfirmation";
-
+import LandlordUpdatePropertyView from "./components/Pages/Dashboard/LandlordDashboard/LandlordUpdatePropertyView";
+import Contact from "./components/Pages/Contact/Contact";
+import HowItWorks from "./components/Pages/HowItWorks/HowItWorks";
 
 
 function App() {
@@ -40,7 +42,9 @@ function App() {
         <Route path="/application-details/:id" element={<ApplicationDetails/>}/>
         <Route path="/schedule-tour/:id" element={<ScheduleATour/>}/>
         <Route path="/tour-confirmation" element={<TourConfirmation/>}/>
-
+        <Route path="/landlord-update-property-view/:id" element={<LandlordUpdatePropertyView/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/How-it-works" element={<HowItWorks/>}/>
       </Routes>
 
 

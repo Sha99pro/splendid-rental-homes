@@ -1,9 +1,14 @@
+.home{
+    background-color: #f8f7f3;
+}
+
+
 .home-page {
     width: 100%;
 }
 
 .hero{
-    height:450px;
+    height:650px;
     width: 100%;
     background-size : cover;
     background-position:center;
@@ -15,24 +20,28 @@
     position: absolute;
     bottom: 20px;
     left: 50%;
+    transform:translateX(-50%);
     display: flex;
-    gap: 8px;
+    z-index:10;
 }
 
-.dot span{
-    width: 10px;
-    height: 10px;
-    background-color: white;
+.dots span{
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: goldenrod;
     border-radius: 50%;
+    margin:5px;
 }
 
 .dots .active-dot{
-    background-color: blue;
+    background-color:lightgoldenrodyellow;
 }
 
 .search-section{
     text-align: center;
     padding: 40px 20px;
+    background-color: linear-gradient(135deg, #fff4d6, #e8f8f5);
 }
 
 .search-box{

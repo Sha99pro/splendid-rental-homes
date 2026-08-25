@@ -67,6 +67,12 @@ export default function TenantDashboard(){
                 </table>
             </section>
 
+            <section>
+                <Link to="/properties">Browse Properties</Link>
+            </section>
+
+            
+
             <section className="help-section">
                 <h2>Need help with a property?</h2>
                 <Link to="/contact">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 
+
 export default function AddProperty(){
     return(
         <div>
@@ -10,6 +11,12 @@ export default function AddProperty(){
                 <input 
                     type="text"
                     placeholder="Enter the home title for ex:'cozy Townhome'"
+                />
+
+                <label>Property Address</label>
+                <input 
+                    type="text"
+                    placeholder="Enter address"
                 />
 
                 <label>Property Type</label>
@@ -50,7 +57,9 @@ export default function AddProperty(){
                 <input type="file" multiple accept="image/*" />
 
                 <div>
-                    <button>SAVE PROPERTY</button>
+                    <Link to="/landlord-update-property-view/1"> 
+                        <button>SAVE PROPERTY</button>
+                    </Link>
 
                     <Link to="/landlord-dashboard">
                         <button type="button"> CANCEL</button>

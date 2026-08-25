@@ -1,10 +1,10 @@
-import {properties} from "../Properties/Properties"
+import {properties} from "../../Properties/Properties"
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export default function PropertyDetails(){
+export default function LandlordUpdatePropertyView(){
     const{id} = useParams();
-  
+    
 
   
     const property = properties.find((property) => property.id === Number(id));
@@ -83,13 +83,6 @@ export default function PropertyDetails(){
                     ))}
                 </div>
             </section>
-
-            <Link to="/application-form">
-                <button>APPLY NOW</button>
-            </Link>
-
-            <Link to={`/schedule-tour/${property.id}`}>Schedule A Tour</Link>
-
 
              {/* Contact Landlord*/}
             <section className="landlord-contact">

@@ -1,0 +1,326 @@
+.navbar{
+
+height:90px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 60px;
+background:
+linear-gradient(
+90deg,
+#fffaf2,
+#ffffff
+);
+font-family: "Poppins", sans-serif;
+
+
+box-shadow:
+
+0 5px 25px rgba(0,0,0,0.08);
+
+
+font-family:"Poppins",sans-serif;
+
+
+}
+
+
+/* BRAND */
+
+
+.brand{
+
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+
+}
+
+
+
+
+/* HOME LOGO */
+
+
+.brand-logo{
+
+
+width:60px;
+
+height:60px;
+
+
+object-fit:contain;
+
+
+padding:8px;
+
+
+border-radius:18px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#e8f5e9,
+#fff3cd
+);
+
+
+box-shadow:
+
+0 8px 20px rgba(0,0,0,0.12);
+
+
+}
+
+.brand-text span{
+
+
+font-size:28px;
+
+
+font-weight:800;
+
+
+letter-spacing:.5px;
+
+
+background:
+
+linear-gradient(
+90deg,
+#174a3a,
+#c28b2c
+);
+
+
+-webkit-background-clip:text;
+
+
+-webkit-text-fill-color:transparent;
+
+
+}
+
+
+
+
+.brand-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.brand-text small{
+
+
+font-size:13px;
+
+
+color:#64748b;
+
+
+font-weight:500;
+
+
+margin-top:3px;
+
+
+}
+
+
+/* NAV LINKS */
+
+
+.nav-links{
+
+
+display:flex;
+
+
+gap:30px;
+
+
+align-items:center;
+
+
+}
+
+.nav-links a{
+
+
+text-decoration:none;
+
+
+font-size:17px;
+
+
+font-weight:600;
+
+
+color:#334155;
+
+
+position:relative;
+
+
+transition:.3s;
+
+
+}
+
+.nav-links a::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+height:3px;
+
+
+width:0;
+
+
+bottom:-8px;
+
+
+left:0;
+
+
+background:#c28b2c;
+
+
+border-radius:10px;
+
+
+transition:.3s;
+
+
+}
+
+.nav-links a:hover::after{
+
+
+width:100%;
+
+
+}
+
+nav-links a:hover{
+
+
+color:#174a3a;
+
+
+}
+
+
+* MOBILE */
+
+
+@media(max-width:768px){
+
+
+.navbar{
+
+
+padding:0 20px;
+
+
+height:75px;
+
+
+}
+
+
+
+.brand-logo{
+
+
+width:45px;
+
+height:45px;
+
+
+}
+
+
+
+.brand-text span{
+
+
+font-size:18px;
+
+
+}
+
+
+
+.brand-text small{
+
+
+display:none;
+
+
+}
+
+
+
+.nav-links{
+
+display:flex;
+align-items: center;
+gap:15px;
+
+
+}
+
+
+
+.nav-links a{
+
+
+font-size:14px;
+
+
+}
+
+.login-dropdown {
+    position: relative;
+}
+
+.login-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    padding: 10px;
+    width: 170px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.login-menu a {
+    color: #334155;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-menu a:hover {
+    color: #174a3a;
+}
+
+

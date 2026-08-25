@@ -27,7 +27,7 @@ export default function LandlordLogin(){
                 </Link>
             </form>
             <p> New to Splendid Rental Homes?
-                <Link to="signup">Create an account</Link>
+                <Link to="/signup">Create an account</Link>
             </p>
         </div>
     )

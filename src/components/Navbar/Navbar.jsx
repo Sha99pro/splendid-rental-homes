@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {useNavigate} from "react-router-dom";
-
+import "./Navbar.css"
 
 export default function Navbar() {
 
@@ -26,18 +26,21 @@ export default function Navbar() {
             <div className="nav-links">
                 <Link to="/" >Home</Link>
                 <Link to="/properties"> Properties</Link>
+                <Link to="/contact">Contact</Link>
                 <div className="login-dropdown">
                     <button onClick={() =>setShowLogin(!showLogin)}>
-                        Login
+                        Login ⏷
                     </button>
                     {showLogin &&(
                         <div className="login-menu">
-                            <Link to="landlord-login">Landlord Login</Link>
-                            <Link to="tenant-login">Tenant Login</Link>
+                            <Link to="/landlord-login">Landlord Login</Link>
+                            
+                            <Link to="/tenant-login">Tenant Login</Link>
                       </div>
                     )}
                 </div>
-                <button onClick={() =>navigate("/login")}>Logout</button>
+                
+                <button onClick={() =>navigate("/login")}>Logout ⏻</button>
             </div>
         </nav>
     )
