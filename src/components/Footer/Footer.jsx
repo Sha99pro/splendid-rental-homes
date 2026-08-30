@@ -1,33 +1,40 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "./Footer.css";
+import Button from "../Button";
 
-export default function Footer(){
-    return(
-        <footer>
-            <div>
-                <div>
-                    <h2>SPLENDID RENTAL HOMES</h2>
-                    <p>
-                        Connecting tenants with comfortable homes and helping landlords find qualifies renters.
-                    </p>
-                </div>
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h2>SPLENDID RENTAL HOMES</h2>
+          <p>
+            Connecting tenants with comfortable homes and helping landlords find
+            qualified renters.
+          </p>
+        </div>
 
-                <div>
-                    <h3>FOR TENANTS</h3>
-                    <Link to="/properties">Browse Listings</Link>
-                    <Link to="/how-it-works">How It Works</Link>
-                    <Link to="Apply">Apply Now</Link>
-                </div>
+        <div className="footer-section">
+          <h3>FOR TENANTS</h3>
+          <Link to="/tenant-login">Tenant Login</Link>{" "}
+          <Link to="/properties">Browse Listings</Link>{" "}
+          <Link to="/how-it-works">How It Works</Link>
+          <br></br>
+          <Link to="/tenant-login">
+            <Button>Apply Now</Button>
+          </Link>
+        </div>
 
-                <div>
-                    <h3>FOR LANDLORDS</h3>
-                    <Link to="/landlord-login">List a Property</Link>
-                    <Link to="/landlord-login">Landlord Login</Link>
-                </div>
+        <div className="footer-section">
+          <h3>FOR LANDLORDS</h3>
+          <Link to="/landlord-login">List a Property</Link>{" "}
+          <Link to="/landlord-login">Landlord Login</Link>
+        </div>
 
-                <div>
-                    <p> &copy 2026 Splendid Rental Homes. All rights Reserved.</p>
-                </div>
-            </div>
-        </footer>
-    )
+        <div className="footer-underneath">
+          <p> &copy 2026 Splendid Rental Homes. All rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
 }

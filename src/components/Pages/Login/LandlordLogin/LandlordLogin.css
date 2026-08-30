@@ -1,0 +1,50 @@
+/* =========================
+   LANDLORD LOGIN
+========================= */
+
+.landlord-login {
+  width: 400px;
+  max-width: 90%;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.landlord-login h1 {
+  text-align: center;
+  color: #21867a;
+  margin-bottom: 25px;
+}
+
+.landlord-login label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.landlord-login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.landlord-login button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 10px;
+  background-color: #21867a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.landlord-login button:hover {
+  background-color: #176b62;
+}

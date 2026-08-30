@@ -17,41 +17,50 @@ import TourConfirmation from "./components/Pages/TourConfirmation/TourConfirmati
 import LandlordUpdatePropertyView from "./components/Pages/Dashboard/LandlordDashboard/LandlordUpdatePropertyView";
 import Contact from "./components/Pages/Contact/Contact";
 import HowItWorks from "./components/Pages/HowItWorks/HowItWorks";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
-  
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>
-    <div>
-  
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/landlord-login" element={<LandlordLogin/>}/>
-        <Route path="/tenant-login"  element={<TenantLogin/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-        <Route path="/properties/" element={<Properties/>}/>
-        <Route path="/properties/:id" element={<PropertyDetails/>}/>
-        <Route path="/property-details" element={<PropertyDetails/>}/>
-        <Route path="/landlord-dashboard" element={<LandlordDashboard/>}/>
-        <Route path="/add-property" element={<AddProperty/>}/>
-        <Route path="/tenant-dashboard" element={<TenantDashboard/>}/>
-        <Route path="/application-form" element={<ApplicationForm/>}/>
-        <Route path="/application-details/:id" element={<ApplicationDetails/>}/>
-        <Route path="/schedule-tour/:id" element={<ScheduleATour/>}/>
-        <Route path="/tour-confirmation" element={<TourConfirmation/>}/>
-        <Route path="/landlord-update-property-view/:id" element={<LandlordUpdatePropertyView/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/How-it-works" element={<HowItWorks/>}/>
-      </Routes>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/landlord-login" element={<LandlordLogin />} />
+          <Route path="/tenant-login" element={<TenantLogin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/properties/" element={<Properties />} />
+          <Route path="/properties/:id" element={<PropertyDetails />} />
+          <Route path="/property-details" element={<PropertyDetails />} />
+          <Route path="/landlord-dashboard" element={<LandlordDashboard />} />
+          <Route path="/add-property" element={<AddProperty />} />
+          <Route path="/tenant-dashboard" element={<TenantDashboard />} />
+          <Route path="/application-form" element={<ApplicationForm />} />
+          <Route
+            path="/application-details/:id"
+            element={<ApplicationDetails />}
+          />
+          <Route path="/schedule-tour/:id" element={<ScheduleATour />} />
+          <Route path="/tour-confirmation" element={<TourConfirmation />} />
+          <Route
+            path="/landlord-update-property-view/:id"
+            element={<LandlordUpdatePropertyView />}
+          />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/How-it-works" element={<HowItWorks />} />
+        </Routes>
 
-
-      <Footer/>
-    </div>
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
 export default App;

@@ -1,0 +1,53 @@
+/* =========================
+   ADD PROPERTY
+========================= */
+
+.add-property {
+  width: 600px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.add-property h1 {
+  text-align: center;
+  color: #21867a;
+  margin-bottom: 25px;
+}
+
+.add-property label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.add-property input,
+.add-property select,
+.add-property textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.add-property textarea {
+  height: 100px;
+}
+
+.add-property button {
+  background-color: #21867a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-property button:hover {
+  background-color: #176b62;
+}

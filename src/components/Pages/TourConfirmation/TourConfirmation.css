@@ -1,0 +1,68 @@
+/* TOUR CONFIRMATION */
+
+.tour-confirmation {
+  width: 700px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* HEADING */
+
+.tour-confirmation h2 {
+  color: #21867a;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* MESSAGE */
+
+.tour-confirmation p {
+  color: #333;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* TOUR DETAILS */
+
+.tour-confirmation h3 {
+  color: #21867a;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+
+.tour-confirmation button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background-color: #21867a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .tour-confirmation {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .tour-confirmation h2 {
+    font-size: 25px;
+  }
+
+  .tour-confirmation button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+/* TENANT LOGIN*/
+
+.tenant-login {
+  width: 400px;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tenant-login h1 {
+  text-align: center;
+  color: #21867a;
+}
+
+.tenant-login label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.tenant-login input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tenant-login button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #21867a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tenant-login a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #21867a;
+  text-decoration: none;
+}

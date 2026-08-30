@@ -1,8 +1,8 @@
 /* =========================
-   CONTACT PAGE
+   SCHEDULE TOUR PAGE
 ========================= */
 
-.contact-page {
+.schedule-tour-page {
   width: 700px;
   max-width: 90%;
   margin: 40px auto;
@@ -11,43 +11,42 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   box-sizing: border-box;
-  text-align: center;
 }
 
 /* HEADING */
 
-.contact-page h2 {
+.schedule-heading {
   text-align: center;
   color: #21867a;
   font-size: 30px;
   margin: 0 0 25px 0;
 }
 
-.contact-page h1 {
+.schedule-tour-page h2,
+.schedule-tour-page h3 {
   color: #21867a;
 }
 
-.contact-page h3 {
-  color: #21867a;
-}
 /* LABELS */
 
-.contact-page label {
+.schedule-tour-page label {
   display: block;
-  margin-top: 15px;
   margin-bottom: 6px;
+  margin-top: 15px;
   color: #333;
   font-weight: 600;
 }
 
-/* FORM FIELDS */
+/* ALL FORM FIELDS */
 
-.contact-page input,
-.contact-page textarea {
+.schedule-tour-page input,
+.schedule-tour-page select,
+.schedule-tour-page textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
   padding: 12px;
+  margin: 0;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
@@ -55,22 +54,23 @@
 
 /* TEXTAREA */
 
-.contact-page textarea {
-  min-height: 120px;
+.schedule-tour-page textarea {
+  min-height: 100px;
   resize: vertical;
 }
 
 /* FOCUS */
 
-.contact-page input:focus,
-.contact-page textarea:focus {
+.schedule-tour-page input:focus,
+.schedule-tour-page select:focus,
+.schedule-tour-page textarea:focus {
   outline: none;
   border-color: #21867a;
 }
 
 /* BUTTON */
 
-.contact-page button {
+.schedule-tour-page button {
   display: block;
   margin: 25px auto 0;
   padding: 12px 25px;
@@ -83,23 +83,31 @@
   cursor: pointer;
 }
 
-.contact-page button:hover {
-  background-color: #176b62;
+
+.modal-message{
+    color: red;
 }
 
 /* MOBILE */
 
+@media (max-width: 900px) {
+  .schedule-tour-page {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
 @media (max-width: 600px) {
-  .contact-page {
+  .schedule-tour-page {
     width: 95%;
     padding: 20px;
   }
 
-  .contact-page h2 {
+  .schedule-heading {
     font-size: 25px;
   }
 
-  .contact-page button {
+  .schedule-tour-page button {
     width: 100%;
   }
 }
