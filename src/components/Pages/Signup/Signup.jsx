@@ -12,10 +12,10 @@ export default function Signup() {
   const [role, setRole] = useState("");
 
   const navigate = useNavigate();
-
+     {/* handling browser default refresh*/}
   function handleSubmit(event) {
     event.preventDefault();
-
+     {/*conditional rendering for the inputs*/}
     if (!name || !email || !password || !confirmPassword) {
       setMessage("Please fill all the details");
       return;
@@ -28,11 +28,11 @@ export default function Signup() {
       setMessage("Passwords do not match");
       return;
     }
-
+     {/*create localstorage to save the details(email id, password and role*/}
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     localStorage.setItem("role", role);
-
+    {/*conditional rendering and routing based on role selection*/}
     if (role === "tenant") {
       navigate("/tenant-login");
     } else {
@@ -111,7 +111,7 @@ export default function Signup() {
 
         <button type="submit">Create Account</button>
       </form>
-
+      {/* display message only when it exists*/}
       {message && <p>{message}</p>}
 
       <p> Already have an account?</p>

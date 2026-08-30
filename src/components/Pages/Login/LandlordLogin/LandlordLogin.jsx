@@ -8,10 +8,10 @@ export default function LandlordLogin() {
   const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
-
+  {/* handling browser default refresh*/}
   function handleSubmit(event) {
     event.preventDefault();
-
+    {/*getting details saved in the localstorage signup*/}
     const savedEmail = localStorage.getItem("email");
     const savedPassword = localStorage.getItem("password");
     const savedRole = localStorage.getItem("role");
@@ -67,7 +67,8 @@ export default function LandlordLogin() {
         {" "}
         New to Splendid Rental Homes?
         <Link to="/signup">Create an account</Link>
-      </p>
+      </p>      
+      {/* display message only when it exists*/}
       {message && <p>{message}</p>}
     </div>
   );

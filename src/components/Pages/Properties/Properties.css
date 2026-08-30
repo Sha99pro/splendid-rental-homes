@@ -1,15 +1,11 @@
-/* =========================
-   PROPERTIES PAGE
-========================= */
+/* PROPERTIES PAGE */
 
 .properties-page {
   padding: 40px 60px;
   background-color: #ffffff;
 }
 
-/* =========================
-   PROPERTIES HEADER
-========================= */
+/*PROPERTIES HEADER*/
 
 .properties-header {
   text-align: center;
@@ -27,9 +23,7 @@
   font-size: 16px;
 }
 
-/* =========================
-   FILTERS
-========================= */
+/*FILTERS*/
 
 .filters {
   display: flex;
@@ -50,9 +44,7 @@
   font-size: 15px;
 }
 
-/* =========================
-   PROPERTY GRID
-========================= */
+/* PROPERTY GRID*/
 
 .property-grid {
   display: flex;
@@ -61,9 +53,7 @@
   gap: 30px;
 }
 
-/* =========================
-   PROPERTY CARD
-========================= */
+/*PROPERTY CARD*/
 
 .property-card {
   width: 500px;
@@ -82,9 +72,7 @@
   transition: 0.3s ease;
 }
 
-/* =========================
-   PROPERTY IMAGE
-========================= */
+/* PROPERTY IMAGE*/
 
 .property-card img {
   width: 100%;
@@ -93,9 +81,7 @@
   border-radius: 8px;
 }
 
-/* =========================
-   PROPERTY TEXT
-========================= */
+/* PROPERTY TEXT  */
 
 .property-card h2 {
   color: #21867a;
@@ -109,9 +95,7 @@
   margin: 8px 0;
 }
 
-/* =========================
-   VIEW DETAILS
-========================= */
+/*VIEW DETAILS*/
 
 .view-details {
   display: inline-block;
@@ -129,9 +113,7 @@
   background-color: #17665d;
 }
 
-/* =========================
-   BREAKPOINT 1
-========================= */
+/* BREAKPOINT 1*/
 
 @media (max-width: 900px) {
   .properties-page {
@@ -143,9 +125,14 @@
   }
 }
 
-/* =========================
-   BREAKPOINT 2
-========================= */
+/* BREAKPOINT 2*/
+@media(max-width: 768px){
+    .property-card{
+        width: 100%;
+        margin: 0 auto;
+    }
+  }
+/* BREAKPOINT 3*/
 
 @media (max-width: 600px) {
   .properties-page {
@@ -159,9 +146,11 @@
 
   .property-card {
     width: 100%;
+    box-sizing:border-box;
   }
 
   .property-card img {
-    height: 220px;
+    height: auto;
+    width:100%;
   }
 }

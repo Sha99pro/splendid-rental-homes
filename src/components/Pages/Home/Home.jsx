@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import { properties } from "../Properties/Properties";
 
 import "./Home.css";
@@ -32,8 +31,7 @@ export default function Home() {
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("");
 
-  const navigate = useNavigate();
-
+   /*setting images effects with timer*/
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((currentSlide) => {
@@ -45,6 +43,7 @@ export default function Home() {
       clearInterval(timer);
     };
   }, []);
+  /*filtering properties based on rent,hometype,location,bedrooms,bathrooms*/
   const filteredProperties = properties.filter((property) => {
     let matchesRent = true;
     if (rent === "Under $1700") {
@@ -193,6 +192,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Home page Introduction */}
       <section className="features">
         <h2>Why choose Splendid Rental Homes</h2>
         <div className="feature-grid">

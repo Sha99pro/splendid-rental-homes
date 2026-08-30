@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./HowItWorks.css"
 
 export default function HowItWorks() {
   return (
-    <main>
+    <main className="how-it-works">
       <h1>How Splendid Rental Homes Works</h1>
       <p>
         Finding and securing your ideal rental home in Missouri should be

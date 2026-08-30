@@ -10,9 +10,9 @@ export default function ScheduleATour() {
   const { id } = useParams();
   const property = properties.find((property) => property.id === Number(id));
   const [selectedSlots, setSelectedSlots] = useState(0);
-  const [scheduled, setScheduled] = useState(false);
+  const [scheduled] = useState(false);
   const navigate = useNavigate();
-
+  {/*conditonal rendering if property exists*/}
   if (!property) {
     return (
       <main>
@@ -21,9 +21,10 @@ export default function ScheduleATour() {
       </main>
     );
   }
-
+  {/*handling browser default refreshing*/}
   function handleScheduled(event) {
     event.preventDefault();
+    {/*conditional rendering for count of time slots selection*/}
     if (selectedSlots < 3) {
       setShowModal(true);
       return;
@@ -59,6 +60,7 @@ export default function ScheduleATour() {
               <input
                 type="checkbox"
                 onChange={(event) => {
+                    {/*condition for timeslots count check*/}
                   if (event.target.checked) {
                     setSelectedSlots(selectedSlots + 1);
                   } else {
@@ -72,6 +74,7 @@ export default function ScheduleATour() {
               <input
                 type="checkbox"
                 onChange={(event) => {
+                    {/*condition for timeslots count check*/}
                   if (event.target.checked) {
                     setSelectedSlots(selectedSlots + 1);
                   } else {
@@ -85,6 +88,7 @@ export default function ScheduleATour() {
               <input
                 type="checkbox"
                 onChange={(event) => {
+                    {/*condition for timeslots count check*/}
                   if (event.target.checked) {
                     setSelectedSlots(selectedSlots + 1);
                   } else {
@@ -98,6 +102,7 @@ export default function ScheduleATour() {
               <input
                 type="checkbox"
                 onChange={(event) => {
+                    {/*condition for timeslots count check*/}
                   if (event.target.checked) {
                     setSelectedSlots(selectedSlots + 1);
                   } else {
@@ -112,7 +117,7 @@ export default function ScheduleATour() {
         <br></br>
 
         <p>Selected slots: {selectedSlots}</p>
-
+         {/* show an error message when fewer than 3 time slots are selected*/}
         {showModal && (
           <div className="modal">
             <div className="modal-content">
@@ -122,7 +127,7 @@ export default function ScheduleATour() {
         )}
 
         <button>Schedule Tour</button>
-
+        {/*show the message when required details are provided and clicked on the button schedule tour*/}
         {scheduled && (
           <div>
             <h2>Tour scheduled!</h2>

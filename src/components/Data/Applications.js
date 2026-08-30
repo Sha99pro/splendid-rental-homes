@@ -8,8 +8,8 @@ export const applications = [
     startDate: "09/08/2026",
 
     //personal details
-    firstName: "John",
-    lastName: "David",
+    firstName: "Shawn",
+    lastName: "Miller",
     dateOfBirth: "01/15/1989",
     ssn: "758-87-9632",
     idNumber: "MO123456",
@@ -20,10 +20,10 @@ export const applications = [
     //Occupants
     occupants: [
       {
-        firstName: "James",
+        firstName: "Emily",
         middleName: "S",
-        LastName: "Meher",
-        dateOfBirth: "02/12/1987",
+        lastName: "Miller",
+        dateOfBirth: "02/12/1985",
         relationship: "Spouse",
       },
     ],
@@ -58,19 +58,23 @@ export const applications = [
         position: "Manager",
         dates: "2022-present",
         income: "$100,000",
-        supervisor: "Shawn",
+        supervisor: "Gabby",
         phone: "235-569-8965",
+        state:"Texas",
+        city:"McKelley",
+        street:"123 Main street",
+        zip:63750
       },
     ],
 
     //other income sources
     otherIncome: [
       {
-        type: "teaching",
-        manthlyIncome: "$2500",
+        type: "Teaching",
+        monthlyIncome: "$2500",
         providerName: "EducateStreams",
-        street: "123 Mian street",
-        city: "st.Louis",
+        street: "195 Groover street",
+        city: "St.Louis",
         state: "MO",
         zip: "62534",
         phone: "123-456-7890",
@@ -82,7 +86,7 @@ export const applications = [
       name: "Emily",
       phone: "123-896-4689",
       relationship: "Spouse",
-      street: "123 Main st.",
+      street: "105 fashion st.",
       city: "St.Louis",
       state: "MO",
       zip: "65310",
@@ -166,7 +170,7 @@ export const applications = [
       {
         firstName: "Daniel",
         middleName: "R",
-        LastName: "Wilson",
+        lastName: "Wilson",
         dateOfBirth: "11/05/1990",
         relationship: "Spouse",
       },
@@ -205,6 +209,10 @@ export const applications = [
         income: "$82,000",
         supervisor: "Karen Williams",
         phone: "573-321-6789",
+        state:"Illinois",
+        city:"Chicago",
+        street:"456 Lincoln street.",
+        zip:45678
       },
     ],
 

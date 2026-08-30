@@ -10,7 +10,7 @@ export default function ApplicationForm() {
     event.preventDefault();
     setSubmitted(true);
   }
-
+   {/*conditional rendering: based on application submission status */}
   if (submitted) {
     return (
       <div className="application-submitted">

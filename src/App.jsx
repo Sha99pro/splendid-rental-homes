@@ -11,7 +11,7 @@ import AddProperty from "./components/Pages/Dashboard/Add Property/AddProperty";
 import TenantDashboard from "./components/Pages/Dashboard/TenantDashboard/TenantDashboard";
 import PropertyDetails from "./components/Pages/PropertyDetails/PropertyDetails";
 import ApplicationForm from "./components/Pages/Applications/ApplicationForm/ApplicationForm";
-import ApplicationDetails from "./components/Pages/Applications/ApplicationDetails";
+import ApplicationDetails from "./components/Pages/Applications/ApplicationDetails/ApplicationDetails";
 import ScheduleATour from "./components/Pages/ScheduleATour/ScheduleATour";
 import TourConfirmation from "./components/Pages/TourConfirmation/TourConfirmation";
 import LandlordUpdatePropertyView from "./components/Pages/Dashboard/LandlordDashboard/LandlordUpdatePropertyView";
@@ -22,7 +22,6 @@ import { useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);

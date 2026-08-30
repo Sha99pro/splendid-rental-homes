@@ -10,7 +10,7 @@ export default function LandlordDashboard() {
           <h1>Welcome back, Landlord!</h1>
           <p>Manage your rental properties and applications here.</p>
         </div>
-
+        {/* add properties page link */}
         <Link to="/add-property" className="add-property-button">
           +Add Property
         </Link>
@@ -31,7 +31,7 @@ export default function LandlordDashboard() {
           <p>6</p>
         </div>
       </div>
-
+       {/*recent applications table */}
       <section>
         <h2>Recent Applications</h2>
 

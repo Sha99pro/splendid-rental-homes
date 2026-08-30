@@ -8,7 +8,7 @@ export const properties = [
     title: "Cozy Townhome",
     city: "O'Fallon, MO",
     address: "115 Cobble Rd O'Fallon, MO 63366",
-    rent: "$ 1,850/mo",
+    rent: 1850,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 2,
@@ -50,7 +50,7 @@ export const properties = [
     title: "Family Home",
     city: "Wentzville, MO",
     address: "124 Intrepid Ave Wentzville, MO 65536",
-    rent: "$ 1,600/mo",
+    rent: 1600,
     type: "Townhome",
     bedrooms: 3,
     bathrooms: 2.5,
@@ -90,7 +90,7 @@ export const properties = [
     title: "Family Home",
     city: "O'fallon, MO",
     address: "159 Joseph St Ofallon, MO 63366",
-    rent: "$ 2,000/mo ",
+    rent: 2000,
     type: "Single Family Home",
     bedrooms: 4,
     bathrooms: 3,
@@ -126,7 +126,7 @@ export const properties = [
     title: "Family Home",
     city: "Wentzville, MO",
     address: "100 Dry Brook Rd Wentzville, MO 63356",
-    rent: "$ 1,750/mo",
+    rent: 1750,
     type: "Single Family Home",
     bedrooms: 4,
     bathrooms: 3,
@@ -162,7 +162,7 @@ export const properties = [
     title: "Family Home",
     city: "Wentzville, MO",
     address: "1 Prairie Point Dr Wentzville, MO 63367",
-    rent: "$ 1,900/mo",
+    rent: 1900,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 3,
@@ -200,7 +200,7 @@ export const properties = [
     title: "Family Home",
     city: "O'fallon, MO",
     address: "204 N Main St.  O'fallon, MO 63366",
-    rent: "$ 1,950/mo",
+    rent: 1950,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 3,
@@ -237,7 +237,7 @@ export const properties = [
     title: "Family Home",
     city: "Saint Peters, MO",
     address: "100 Grenache Blanc Blvd Saint Peters, MO 63105",
-    rent: "$ 2,000/mo",
+    rent: 2000,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 3,
@@ -274,7 +274,7 @@ export const properties = [
     title: "Family Home",
     city: "Lake Saint Louis, MO",
     address: "4000 Brady Way Lake Saint Louis, MO 63367",
-    rent: "$ 1,750/mo",
+    rent: 1750,
     type: "Apartment",
     bedrooms: 3,
     bathrooms: 2,
@@ -310,7 +310,7 @@ export const properties = [
     title: "Family Home",
     city: " Wentzville, MO",
     address: "124 Granite Way  Wentzville, MO 63367",
-    rent: "$ 2,100/mo",
+    rent: 2100,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 3,
@@ -349,7 +349,7 @@ export const properties = [
     title: "Family Home",
     city: "Wentzville, MO",
     address: "2680 Droste Rd Wentzville, MO 63367",
-    rent: "$ 2,000/mo",
+    rent: 2000,
     type: "Townhome",
     bedrooms: 4,
     bathrooms: 3,
@@ -385,7 +385,7 @@ export const properties = [
     title: "Family Home",
     city: " Lake saint louis, MO",
     address: "3237-3 Rue Royale St Lake saint louis, MO 63367",
-    rent: "$ 1,350/mo",
+    rent: 1350,
     type: "Apartment",
     bedrooms: 2,
     bathrooms: 2,
@@ -421,7 +421,7 @@ export const properties = [
     title: "Family Home",
     city: "Lake saint louis, MO",
     address: "119 Carlton Point Dr Lake saint louis, MO 63367",
-    rent: "$ 1,750/mo",
+    rent: 1750,
     type: "Condo",
     bedrooms: 3,
     bathrooms: 3,
@@ -456,7 +456,7 @@ export const properties = [
     title: "Family Home",
     city: " Lake Saint Louis, MO",
     address: "101 Lemon Dr Lake Saint Louis, MO 63367",
-    rent: "$ 1,800/mo",
+    rent: 1800,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 3,
@@ -492,7 +492,7 @@ export const properties = [
     title: "Family Home",
     city: " Lake Saint Louis, MO 63367",
     address: "1000 Centennial Club Dr Lake Saint Louis, MO 63367",
-    rent: "$ 1,350/mo",
+    rent: 1350,
     type: "Townhome",
     bedrooms: 2,
     bathrooms: 2,
@@ -527,7 +527,7 @@ export const properties = [
     title: "Family Home",
     city: "O'fallon, MO",
     address: "700 Fernwood Ter O'fallon, MO 63366",
-    rent: "$ 1,750/mo",
+    rent: 1750,
     type: "Single Family Home",
     bedrooms: 3,
     bathrooms: 3,
@@ -569,15 +569,15 @@ export default function Properties() {
 
   const filteredProperties = properties.filter((property) => {
     let matchesRent = true;
-    if (rent === "Under $1700") {
+    if (rent === "Under $1,700") {
       matchesRent = property.rent < 1700;
     }
 
-    if (rent === "$1700 -$2000") {
+    if (rent === "$1,700 -$2,000") {
       matchesRent = property.rent >= 1700 && property.rent <= 2000;
     }
 
-    if (rent === "Over $2000") {
+    if (rent === "Over $2,000") {
       matchesRent = property.rent > 2000;
     }
 
@@ -589,8 +589,8 @@ export default function Properties() {
       bathrooms === "All" || property.bathrooms === Number(bathrooms);
 
     return (
-      matchesLocation &&
       matchesRent &&
+      matchesLocation &&
       matchesHomeType &&
       matchesBedrooms &&
       matchesBathrooms
@@ -663,7 +663,7 @@ export default function Properties() {
         {filteredProperties.length} out of {properties.length} listings
       </h2>
 
-      {/* Property Cards */}
+      {/* Property Card child component use */}
       <div className="property-grid">
         {filteredProperties.map((property) => (
           <PropertyCard key={property.id} property={property} />

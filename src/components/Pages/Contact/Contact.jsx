@@ -3,6 +3,7 @@ import "./Contact.css";
 export default function Contact() {
   return (
     <main className="contact-page">
+        {/*contact info*/}
       <h1>Contact Us</h1>
       <p>We're here to hep you find your home</p>
       <br></br>

@@ -1,7 +1,8 @@
-import { applications } from "../../Data/Applications";
+import { applications } from "../../../Data/Applications";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "./ApplicationDetails.css"
 
 export default function ApplicationDetails() {
   const { id } = useParams();
@@ -24,7 +25,7 @@ export default function ApplicationDetails() {
   }
 
   return (
-    <main>
+    <main className="application-details">
       <h1> Application Details</h1>
 
       {/* property & lease */}
@@ -52,13 +53,15 @@ export default function ApplicationDetails() {
       <section>
         <h2> Roommates/other Occupants</h2>
         {application.occupants.map((person, index) => {
+          return(
           <div key={index}>
             <p>First Name: {person.firstName}</p>
-            <p>Middle Name: {person.middlename}</p>
+            <p>Middle Name: {person.middleName}</p>
             <p>Last Name: {person.lastName}</p>
             <p>Date of Birth: {person.dateOfBirth}</p>
             <p>Relationship: {person.relationship}</p>
-          </div>;
+          </div>
+          );
         })}
       </section>
 
@@ -83,19 +86,21 @@ export default function ApplicationDetails() {
       <section>
         <h2>Employment History</h2>
         {application.employment.map((job, index) => {
+          return(
           <div key={index}>
             <p>Employer:{job.employer}</p>
             <p>Position:{job.position}</p>
             <p>Dates;{job.dates}</p>
             <p>Income:{job.income}</p>
             <p>Supervisor:{job.supervisor}</p>
-            <p>Phone:{job.supervisor}</p>
-            <p>Address:{job.address}</p>
+            <p>Address:-</p>
+            <p>Phone:{job.phone}</p>
             <p>State:{job.state}</p>
             <p>City:{job.city}</p>
             <p>Street:{job.street}</p>
             <p>Zip:{job.zip}</p>
-          </div>;
+          </div>
+          );
         })}
       </section>
 
@@ -103,23 +108,25 @@ export default function ApplicationDetails() {
       <section>
         <h2>Other Income sources</h2>
         {application.otherIncome.map((income, index) => {
+          return(
           <div key={index}>
             <p>Type:{income.type}</p>
             <p>Monthly Income:{income.monthlyIncome}</p>
             <p>Provider Name:{income.providerName}</p>
             <p>Street:{income.street}</p>
             <p>City:{income.city}</p>
-            <p>State:{income.city}</p>
+            <p>State:{income.state}</p>
             <p>Zip:{income.zip}</p>
             <p>Phone:{income.phone}</p>
-          </div>;
+          </div>
+          );
         })}
       </section>
 
       {/*Emergency contact info */}
       <section>
         <h2>Emergency Contact Information</h2>
-        <p>Name:{application.emergencyContact.Name}</p>
+        <p>Name:{application.emergencyContact.name}</p>
         <p>Phone:{application.emergencyContact.phone}</p>
         <p>Relationship:{application.emergencyContact.relationship}</p>
         <p>Street:{application.emergencyContact.street}</p>
@@ -132,13 +139,15 @@ export default function ApplicationDetails() {
       <section>
         <h2>Vehicles</h2>
         {application.vehicles.map((vehicle, index) => {
+          return(
           <div key={index}>
-            <p>Make&ModeL:{vehicle.model}</p>
+            <p>Make&Model:{vehicle.makeModel}</p>
             <p>Year:{vehicle.year}</p>
             <p>Color:{vehicle.color}</p>
-            <p>Plate:{vehicle.plate}</p>
+            <p>Plate:{vehicle.plateNumber}</p>
             <p>State:{vehicle.state}</p>
-          </div>;
+          </div>
+          );
         })}
       </section>
 
@@ -154,7 +163,7 @@ export default function ApplicationDetails() {
         <p>Ever file bankruptcy:{application.otherInfo.bankruptcy}</p>
         <p>Bankruptcy When:{application.otherInfo.bankruptcyWhen}</p>
         <p>Bankruptcy why:{application.otherInfo.bankruptcyWhy}</p>
-        <p>Currently Amoke:{application.otherInfo.smoke}</p>
+        <p>Currently Smoke:{application.otherInfo.smoker}</p>
         <p>Have Pets:{application.otherInfo.pets}</p>
         <p>Pet Type:{application.otherInfo.petType}</p>
         <p>Pet Breed:{application.otherInfo.petBreed}</p>
@@ -176,7 +185,7 @@ export default function ApplicationDetails() {
       {/*Co-signer*/}
       <section>
         <h2>Co-Signer Information</h2>
-        <p>Cosigning for:{application.coSigner.coSigningFor}</p>
+        <p>Cosigning for:{application.coSigner.cosigningFor}</p>
         <p>Full Name:{application.coSigner.fullName}</p>
         <p>Unit Applied For:{application.coSigner.unitAppliedFor}</p>
         <p>Signature:{application.coSigner.signature}</p>

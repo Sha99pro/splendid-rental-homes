@@ -14,7 +14,7 @@ export default function PropertyCard({ property }) {
         <p>{property.address}</p>
         <p>{property.bedrooms} bedrooms</p>
         <p>{property.bathrooms} bathrooms</p>
-        <p>Rent: {property.rent}</p>
+        <p>Rent: ${property.rent}/mo</p>
 
         <Link to={`/properties/${property.id}`} className="view-details">
           View Details

@@ -4,6 +4,7 @@ import "./AddProperty.css";
 export default function AddProperty() {
   return (
     <div className="add-property">
+        {/*adding property details*/}
       <h1>ADD PROPERTY</h1>
 
       <form>

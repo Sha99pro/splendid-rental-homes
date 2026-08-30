@@ -10,12 +10,13 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="brand">
+        {/*brand logo*/}
         <img
           className="brand-logo"
           src="/homeSectionImages/brandLogo.jpg"
           alt="Home Logo"
         />
-
+        {/*brand-name*/}
         <div className="brand-text">
           <span>
             <strong>Splendid Rental Homes</strong>
@@ -23,7 +24,7 @@ export default function Navbar() {
           <small>Find a place to call Home</small>
         </div>
       </div>
-
+      {/*navigation links to different pages*/}
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/properties"> Properties</Link>

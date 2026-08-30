@@ -10,7 +10,7 @@ export default function TenantDashboard() {
           <p>Welcome back!</p>
         </div>
       </div>
-
+       {/* applications status details*/}
       <div className="summary-cards">
         <div className="summary-card">
           <h3>Approved</h3>
@@ -30,7 +30,7 @@ export default function TenantDashboard() {
 
       <section className="dashboard-section">
         <h2>My Applications</h2>
-
+         {/*application details table*/}
         <table className="applications-table">
           <thead>
             <tr>
@@ -74,6 +74,7 @@ export default function TenantDashboard() {
 
       <section className="help-section">
         <h2>Need help with a property?</h2>
+        {/*contact landlord */}
         <Link to="/contact">
           <button> Contact Landlord</button>
         </Link>
