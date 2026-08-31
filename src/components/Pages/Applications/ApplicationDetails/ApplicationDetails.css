@@ -1,0 +1,142 @@
+/*APPLICATON DETAILS PAGE*/
+
+.application-details {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8fafa;
+}
+
+
+/* MAIN HEADING*/
+
+.application-details h1 {
+  text-align: center;
+  color: #21867a;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+
+/*SECTION CARDS*/
+
+.application-details section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+/*SECTION HEADINGS*/
+
+.application-details h2 {
+  color: #21867a;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5eeee;
+  padding-bottom: 10px;
+}
+
+.application-details h3 {
+  color: #444;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+/* INFORMATION*/
+
+.application-details p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.application-details strong {
+  color: #333;
+}
+
+
+/* APPLICATION STATUS*/
+
+.application-status {
+  text-align: center;
+}
+
+.application-status strong {
+  color: #21867a;
+  font-size: 20px;
+}
+
+
+
+/* MESSAGE*/
+
+.application-message {
+  background-color: #f1f8f7;
+  border-left: 4px solid #21867a;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+/* BACK TO DASHBOARD*/
+
+.application-details .back-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #21867a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.application-details .back-button:hover {
+  background-color: #176b62;
+}
+
+
+/* RESPONSIVE*/
+
+@media (max-width: 768px) {
+  .application-details {
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .application-details h1 {
+    font-size: 27px;
+  }
+
+  .application-details section {
+    padding: 20px 15px;
+  }
+
+  .application-details h2 {
+    font-size: 20px;
+  }
+
+  .application-details p {
+    font-size: 15px;
+    overflow-wrap: break-word;
+  }
+
+  .application-status button {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .application-details .back-button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+

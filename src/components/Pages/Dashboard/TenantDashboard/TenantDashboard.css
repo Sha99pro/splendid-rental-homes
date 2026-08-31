@@ -1,0 +1,91 @@
+/* TENANT DASHBOARD*/
+
+.tenant-dashboard {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.tenant-dashboard h1 {
+  text-align: center;
+  color: #21867a;
+  margin-bottom: 30px;
+}
+
+.help-section button {
+  background-color: #21867a;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* SUMMARY CARDS */
+
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.summary-card h3 {
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 24px;
+  color: #21867a;
+  font-weight: bold;
+}
+
+/* APPLICATION TABLE */
+
+.tenant-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.tenant-dashboard th,
+.tenant-dashboard td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.tenant-dashboard th {
+  background-color: #21867a;
+  color: white;
+}
+
+/* CONTACT LANDLORD */
+
+.tenant-dashboard a {
+  color: #21867a;
+  text-decoration: none;
+}
+
+.tenant-dashboard a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .summary-cards {
+    flex-direction: column;
+  }
+
+  .tenant-dashboard {
+    padding: 15px;
+  }
+}

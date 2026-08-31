@@ -1,0 +1,141 @@
+.home {
+  background-color: white;
+}
+
+.hero {
+  height: clamp(400px, 50vw, 650px);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 10;
+}
+
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: goldenrod;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.dots .active-dot {
+  background-color: lightgoldenrodyellow;
+}
+
+.features h2 {
+  margin-bottom: 30px;
+  font-size:clamp(22px, 3vw, 32px);
+  color: #21867a;
+}
+
+.feature-card {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+}
+
+section {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.search-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.search-section h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  color: #21867a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.search-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+}
+.features {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.features h3 {
+  color: #21867a;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: white;
+}
+
+.view {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.view h2 {
+  color: #21867a;
+}
+
+.view button {
+  background-color: #21867a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view button:hover {
+  background-color: #17665d;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-card h3 {
+  margin: 18px 10px 8px;
+}
+
+.feature-card p {
+  margin: 0 20px 20px;
+  line-height: 1.5;
+}

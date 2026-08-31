@@ -1,0 +1,103 @@
+/*HOW IT WORKS PAGE*/
+
+.how-it-works {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+
+/* MAIN HEADING*/
+
+.how-it-works h1 {
+  color: #21867a;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.how-it-works > p:first-of-type {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+
+/* SECTION HEADINGS */
+
+.how-it-works h2,
+.how-it-works h3 {
+  color: #21867a;
+  font-size: 25px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+
+/*DESCRIPTION TEXT*/
+
+.how-it-works p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 10px auto;
+  max-width: 750px;
+}
+
+
+/* QUESTIONS SECTION*/
+
+.how-it-works span {
+  display: block;
+  margin-top: 45px;
+  color: #21867a;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.how-it-works span + p {
+  margin-bottom: 25px;
+}
+
+
+/*LINKS / BUTTONS*/
+
+.how-it-works a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 20px;
+  background-color: #21867a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.how-it-works a:hover {
+  background-color: #176b62;
+}
+
+
+/* MOBILE*/
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 30px 20px;
+  }
+
+  .how-it-works h1 {
+    font-size: 30px;
+  }
+
+  .how-it-works h2,
+  .how-it-works h3 {
+    font-size: 22px;
+  }
+
+  .how-it-works a {
+    display: block;
+    margin: 10px auto;
+    max-width: 250px;
+  }
+}
