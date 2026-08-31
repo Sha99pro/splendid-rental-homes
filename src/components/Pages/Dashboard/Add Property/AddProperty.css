@@ -1,6 +1,4 @@
-/* =========================
-   ADD PROPERTY
-========================= */
+/* ADD PROPERTY*/
 
 .add-property {
   width: 600px;
@@ -48,6 +46,4 @@
   cursor: pointer;
 }
 
-.add-property button:hover {
-  background-color: #176b62;
-}
+

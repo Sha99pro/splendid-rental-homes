@@ -1,6 +1,4 @@
-/* =========================
-   SIGNUP PAGE
-========================= */
+/* SIGNUP PAGE*/
 
 .signup {
   width: 400px;
@@ -24,8 +22,7 @@
   font-weight: 600;
 }
 
-.signup input,
-.signup select {
+.signup input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;

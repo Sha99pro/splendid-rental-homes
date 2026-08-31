@@ -14,7 +14,7 @@ import ApplicationForm from "./components/Pages/Applications/ApplicationForm/App
 import ApplicationDetails from "./components/Pages/Applications/ApplicationDetails/ApplicationDetails";
 import ScheduleATour from "./components/Pages/ScheduleATour/ScheduleATour";
 import TourConfirmation from "./components/Pages/TourConfirmation/TourConfirmation";
-import LandlordUpdatePropertyView from "./components/Pages/Dashboard/LandlordDashboard/LandlordUpdatePropertyView";
+import LandlordUpdatePropertyView from "./components/Pages/Dashboard/LandlordUpdatePropertyView/LandlordUpdatePropertyView";
 import Contact from "./components/Pages/Contact/Contact";
 import HowItWorks from "./components/Pages/HowItWorks/HowItWorks";
 import { useEffect } from "react";

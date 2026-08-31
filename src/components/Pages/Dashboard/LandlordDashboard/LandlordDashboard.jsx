@@ -31,12 +31,11 @@ export default function LandlordDashboard() {
           <p>6</p>
         </div>
       </div>
-       {/*recent applications table */}
+      {/*recent applications table */}
       <section>
         <h2>Recent Applications</h2>
-
         <div>
-          <table>
+          <table className="landlord-dashboard table">
             <thead>
               <tr>
                 <th>Applicant</th>

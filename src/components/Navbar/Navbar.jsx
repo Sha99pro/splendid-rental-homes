@@ -6,6 +6,7 @@ import "./Navbar.css";
 export default function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -24,10 +25,16 @@ export default function Navbar() {
           <small>Find a place to call Home</small>
         </div>
       </div>
-      {/*navigation links to different pages*/}
-      <div className="nav-links">
+
+      {/*Hamburger button*/}
+      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </button>
+
+      {/*Navigation links*/}
+      <div className={menuOpen ? "nav-ink show" : "nav-links"}>
         <Link to="/">Home</Link>
-        <Link to="/properties"> Properties</Link>
+        <Link to="/properties">Properties</Link>
         <Link to="/contact">Contact</Link>
         <div className="login-dropdown">
           <button onClick={() => setShowLogin(!showLogin)}>Login ⏷</button>
@@ -39,7 +46,6 @@ export default function Navbar() {
             </div>
           )}
         </div>
-
         <button className="logout-button" onClick={() => navigate("/")}>
           Logout ⏻
         </button>

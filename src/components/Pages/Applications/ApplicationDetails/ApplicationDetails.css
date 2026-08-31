@@ -1,4 +1,4 @@
-/*APPLICATION DETAILS PAGE*/
+/*APPLICATON DETAILS PAGE*/
 
 .application-details {
   max-width: 1000px;
@@ -73,21 +73,6 @@
   font-size: 20px;
 }
 
-
-/* STATUS BUTTONS */
-
-.application-status button {
-  padding: 10px 18px;
-  margin: 8px 5px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.application-status button:hover {
-  opacity: 0.9;
-}
 
 
 /* MESSAGE*/

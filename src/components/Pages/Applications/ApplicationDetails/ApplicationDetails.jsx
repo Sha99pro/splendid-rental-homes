@@ -195,7 +195,7 @@ export default function ApplicationDetails() {
       {/*Message */}
       <section>
         <h2> Message from Applicant</h2>
-        <p>{application.message}</p>
+        <p className="application-message">{application.message}</p>
       </section>
 
       {/*Status*/}
@@ -215,7 +215,7 @@ export default function ApplicationDetails() {
         </select>
       </section>
 
-      <Link to="/landlord-dashboard">Back to dashboard</Link>
+      <Link to="/landlord-dashboard" className="back-button">Back to dashboard</Link>
     </main>
   );
 }

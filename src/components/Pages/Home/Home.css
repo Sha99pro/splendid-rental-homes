@@ -3,7 +3,7 @@
 }
 
 .hero {
-  height: 650px;
+  height: clamp(400px, 50vw, 650px);
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -33,14 +33,9 @@
   background-color: lightgoldenrodyellow;
 }
 
-.search-box {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
 .features h2 {
   margin-bottom: 30px;
+  font-size:clamp(22px, 3vw, 32px);
   color: #21867a;
 }
 
@@ -50,16 +45,6 @@
   border: 1px solid #ddd;
   overflow: hidden;
   border-radius: 10px;
-  background-color: white;
-}
-
-.home {
-  background-color: white;
-}
-
-.home-page {
-  width: 100%;
-  min-height: 100vh;
   background-color: white;
 }
 
@@ -76,7 +61,7 @@ section {
 }
 
 .search-section h2 {
-  font-size: 28px;
+  font-size: clamp(22px, 3vw, 32px);
   color: #21867a;
   font-weight: 700;
   margin-bottom: 10px;
@@ -150,7 +135,7 @@ section {
   margin: 18px 10px 8px;
 }
 
-.feture-card p {
+.feature-card p {
   margin: 0 20px 20px;
   line-height: 1.5;
 }

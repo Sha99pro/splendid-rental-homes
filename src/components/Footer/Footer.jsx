@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import Button from "../Button";
+import Button from "../Pages/Button/Button";
 
 export default function Footer() {
   return (

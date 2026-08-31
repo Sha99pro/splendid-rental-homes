@@ -1,0 +1,15 @@
+/* REUSABLE BUTTON */
+
+.button {
+  background-color: #21867a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #176b62;
+}

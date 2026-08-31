@@ -50,6 +50,10 @@
   cursor: pointer;
 }
 
+.tour-confirmation button:hover {
+  background-color: #17665d;
+}
+
 /* MOBILE */
 
 @media (max-width: 600px) {

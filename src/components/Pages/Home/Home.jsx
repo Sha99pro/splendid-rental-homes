@@ -31,7 +31,7 @@ export default function Home() {
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("");
 
-   /*setting images effects with timer*/
+  /*setting images effects with timer*/
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((currentSlide) => {
@@ -75,7 +75,7 @@ export default function Home() {
   });
 
   return (
-    <div className="home-page">
+    <div className="home">
       <section
         className="hero"
         style={{

@@ -8,10 +8,10 @@ export default function TenantLogin() {
   const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
-
+     {/* handling browser default refresh*/}
   function handleSubmit(event) {
     event.preventDefault();
-
+      {/*getting details saved in the localstorage signup*/}
     const savedEmail = localStorage.getItem("email");
     const savedPassword = localStorage.getItem("password");
     const savedRole = localStorage.getItem("role");
@@ -38,7 +38,7 @@ export default function TenantLogin() {
   }
 
   return (
-    <div>
+    <main className="tenant-login">
       <h1>Tenant Login</h1>
       <p> Sign in to manage your rental applications</p>
 
@@ -73,8 +73,8 @@ export default function TenantLogin() {
         New to Splendid Rental Homes?
         <Link to="/signup">Create an account</Link>
       </p>
-
+      {/* display message only when it exists*/}
       {message && <p>{message}</p>}
-    </div>
+    </main>
   );
 }

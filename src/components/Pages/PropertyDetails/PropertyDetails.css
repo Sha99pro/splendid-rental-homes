@@ -1,16 +1,13 @@
-/* =========================
-   PROPERTY DETAILS PAGE
-========================= */
+/* PROPERTY DETAILS PAGE*/
 
-.property-details {
+.property-details-page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 30px;
+  padding:clamp(20px, 4vw, 40px);
 }
 
-/* =========================
-   PROPERTY HEADER
-========================= */
+/* PROPERTY HEADER*/
 
 .property-details h1 {
   color: #21867a;
@@ -27,6 +24,7 @@
 
 .property-details-page h1 {
   color: #21867a;
+  font-size:clamp(24px, 4vw, 32px);
 }
 
 .property-details-page h2 {
@@ -39,11 +37,24 @@
   line-height: 1.6;
 }
 
-/* =========================
-   PROPERTY INFORMATION
-========================= */
+/*main property image*/
+.main-property-image {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
 
-.property-info {
+.main-property-image img {
+  width: 700px;
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* PROPERTY INFORMATION*/
+
+.property-information {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 20px 0;
@@ -54,42 +65,38 @@
   margin: 8px 0;
 }
 
-/* =========================
-   AMENITIES
-========================= */
+/* AMENITIES*/
 
-.amenities {
+.property-amenities {
   border-top: 1px solid #ddd;
   padding-top: 20px;
 }
 
-.amenities li {
+.property-amenities li {
   color: #555;
   margin-bottom: 8px;
 }
 
-/* =========================
-   APPLICATION BUTTON
-========================= */
+/* APPLICATION BUTTON*/
 
-.property-details button {
+.apply-now {
+  display: inline-block;
   background-color: #21867a;
   color: white;
   border: none;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 6px;
+  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.property-details button:hover {
+.apply-now:hover {
   background-color: #17665d;
 }
 
-/* =========================
-   Responsiveness
-========================= */
+/* Responsiveness*/
 
 @media (max-width: 900px) {
   .property-details {
@@ -101,9 +108,7 @@
   }
 }
 
-/* =========================
-   PROPERTY PICTURES
-========================= */
+/* PROPERTY PICTURES*/
 
 .gallery-grid {
   display: block;
@@ -125,9 +130,7 @@
   opacity: 0.85;
 }
 
-/* =========================
-   SCHEDULE TOUR
-========================= */
+/* SCHEDULE TOUR*/
 
 .schedule-tour {
   display: inline-block;
@@ -142,25 +145,6 @@
 
 .schedule-tour:hover {
   background-color: #17665d;
-}
-
-.apply-now {
-  display: inline-block;
-  background-color: #21867a;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.apply-now:hover {
-  background-color: #17665d;
-}
-
-.schedule-tour {
-  background-color: teal;
 }
 
 .back-to-properties {
