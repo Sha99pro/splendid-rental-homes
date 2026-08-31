@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HowItWorks.css"
 
+
 export default function HowItWorks() {
   return (
     <main className="how-it-works">
@@ -53,7 +54,7 @@ export default function HowItWorks() {
       </p>
       <span>Have Questions Before Applying?</span>
       <p>Our team is here to help you every step of the way.</p>
-      <Link to="properties">Browse Properties</Link>{" "}
+      <Link to="/properties">Browse Properties</Link>{" "}
       <Link to="/properties">Schedule a Tour</Link>{" "}
       <Link to="/contact">Contact Support</Link>
     </main>
