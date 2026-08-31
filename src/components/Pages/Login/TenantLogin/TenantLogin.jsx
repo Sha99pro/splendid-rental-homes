@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./TenantLogin.css"
 
 export default function TenantLogin() {
   const [email, setEmail] = useState("");
