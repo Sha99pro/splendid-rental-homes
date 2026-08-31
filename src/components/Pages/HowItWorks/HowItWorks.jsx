@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import "./HowItWorks.css"
-
+import "./HowItWorks.css";
 
 export default function HowItWorks() {
   return (
