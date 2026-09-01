@@ -1,71 +1,161 @@
 import { properties } from "../../Properties/Properties";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./LandlordUpdatePropertyView.css";
 
 export default function LandlordUpdatePropertyView() {
   const { id } = useParams();
 
+  //Finding the property first
   const property = properties.find((property) => property.id === Number(id));
+
+  //creating the states
+  const [isEditing, setIsEditing] = useState(false);
+  const [title, setTitle] = useState(property?.title || "");
+  const [rent, setRent] = useState(property?.rent || "");
+  const [address, setAddress] = useState(property?.address || "");
+  const [bedrooms, setBedrooms] = useState(property?.bedrooms || "");
+  const [bathrooms, setBathrooms] = useState(property?.bathrooms || "");
+  const [description, setDescription] = useState(property?.description || "");
+  const [sqft, setSqft] = useState(property?.sqft || "");
 
   if (!property) {
     return (
       <main>
-        <h2>The property you searching is not found.</h2>
+        <h2>Property not found.</h2>
         <Link to="/properties">Back to properties</Link>
       </main>
     );
   }
 
+  function handleSave() {
+    setIsEditing(false);
+  }
+
   return (
-    <main className="property-details-page">
-      {/*Back button*/}
-      <Link to="/properties" className="back-button">
-        Back to properties
+    <main className="update-property">
+      <Link to="/landlord-dashboard" className="back-button">
+        Back to Dashboard
       </Link>
 
-      {/*Property.title*/}
-      <div className="details-header">
-        <h1>{property.title}</h1>
-        <p className="details-address"> {property.address}</p>
-      </div>
+      {/* TITLE */}
+      {isEditing ? (
+        <input
+          className="title-input"
+          type="text"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+      ) : (
+        <h1>{title}</h1>
+      )}
 
-      {/*Main Image*/}
-      <div className="main-property-image">
-        <img src={property.images[0]} alt={property.title} />
-      </div>
+      {/*ADDRESS */}
+      {isEditing ? (
+        <input
+          type="text"
+          value={address}
+          onChange={(event) => setAddress(event.target.value)}
+        />
+      ) : (
+        <p className="address">{address}</p>
+      )}
 
+      {/* MAIN IMAGE */}
+      <img
+        className="property-image"
+        src={property.images[0]}
+        alt={property.title}
+      />
+      {/* PROPERTY INFORMATION */}
       <section className="property-information">
-        <strong>
-          <h1>{property.title}</h1>
-        </strong>
-        <p>{property.type}</p>
-        <p>{property.address}</p>
-        <strong>
-          <p>${property.rent}/month</p>
-        </strong>
+        <h2>Property Information</h2>
+        <p>
+          <strong>Type:</strong> {property.type}{" "}
+        </p>
 
-        <div className="property-info">
-          <strong>{property.bedrooms} Bedrooms</strong> |
-          <strong>{property.bathrooms} bathrooms</strong> |
-          <strong>{property.sqft} sqft</strong>
-        </div>
+        {/* RENT */}
+        <p>
+          <strong>Rent:</strong>
+          {isEditing ? (
+            <input
+              type="number"
+              value={rent}
+              onChange={(event) => setRent(event.target.value)}
+            />
+          ) : (
+            rent
+          )}
+        </p>
+
+        {/* BEDROOMS */}
+        <p>
+          <strong>Bedrooms:</strong>
+          {isEditing ? (
+            <input
+              type="number"
+              value={bedrooms}
+              onChange={(event) => setBedrooms(event.target.value)}
+            />
+          ) : (
+            bedrooms 
+          )}
+        </p>
+
+        {/* BATHROOMS */}
+        <p>
+          <strong>Bathrooms:</strong>
+          {isEditing ? (
+            <input
+              type="number"
+              value={bathrooms}
+              onChange={(event) => setBathrooms(event.target.value)}
+            />
+          ) : (
+           bathrooms 
+          )}
+        </p>
+
+        {/*SQUAREFOOT */}
+        <p>
+          <strong>Square Feet:</strong>
+          {isEditing ? (
+            <input
+              type="number"
+              value={sqft}
+              onChange={(event) => setSqft(event.target.value)}
+            />
+          ) : (
+             sqft 
+          )}
+        </p>
       </section>
 
+      {/* DESCRIPTION */}
       <section className="property-description">
-        <h2>About this property</h2>
-        <p>{property.description}</p>
+        <h2>About This Property</h2>
+        {isEditing ? (
+          <textarea
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
+          />
+        ) : (
+          <p>{description}</p>
+        )}
       </section>
 
+      {/* AMENITIES */}
       <section className="property-amenities">
         <h2>Amenities</h2>
         <ul>
           {property.amenities.map((amenity, index) => (
-            <li key={index}> {amenity} </li>
+            <li key={index}>{amenity}</li>
           ))}
         </ul>
       </section>
 
-      {/*Property-gallery*/}
+      {/* PROPERTY PICTURES */}
       <section>
         <h2>Property Pictures</h2>
         <div className="gallery-grid">
@@ -79,21 +169,35 @@ export default function LandlordUpdatePropertyView() {
         </div>
       </section>
 
-      {/* Contact Landlord*/}
+      {/* LANDLORD INFORMATION */}{" "}
       <section className="landlord-contact">
-        <h2> Contact landlord</h2>
-        <p>{property.landlord}</p>
-        <p>{property.email}</p>
-        <p>{property.phone}</p>
+        {" "}
+        <h2>Contact Landlord</h2> <p>{property.landlord}</p>{" "}
+        <p>{property.email}</p> <p>{property.phone}</p>{" "}
       </section>
 
-      {/* Rental info*/}
-      <p>Security Deposit: {property.deposit}</p>
-      <p>Application Fee: {property.applicationFee}</p>
-      <p>Lease term: {property.leaseTerm}</p>
+      {/* RENTAL INFORMATION */}{" "}
+      <section className="rental-info">
+        <p>
+          <strong>Security Deposit:</strong> {property.deposit}{" "}
+        </p>
+        <p>
+          <strong>Application Fee:</strong> {property.applicationFee}{" "}
+        </p>
+        <p>
+          <strong>Lease Term:</strong> {property.leaseTerm}{" "}
+        </p>
+      </section>
 
-      <Link to="/properties">Back to Properties</Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link to="/landlord-dashboard">Back to dashboard</Link>
+      {/* UPDATE / SAVE BUTTON */}{" "}
+      <div className="update-buttons">
+        {isEditing ? (
+          <button onClick={handleSave}> Save Changes </button>
+        ) : (
+          <button onClick={() => setIsEditing(true)}> Update Property </button>
+        )}{" "}
+        <Link to="/landlord-dashboard"> Back to Dashboard </Link>{" "}
+      </div>{" "}
     </main>
   );
 }

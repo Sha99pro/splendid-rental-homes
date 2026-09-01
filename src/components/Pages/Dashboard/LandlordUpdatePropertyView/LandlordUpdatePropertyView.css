@@ -1,0 +1,208 @@
+/* UPDATE PROPERTY PAGE */
+
+.update-property {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    color: #21867a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* TITLE */
+
+.update-property h1 {
+    color: #21867a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.address {
+    text-align: center;
+    color: #555;
+}
+
+.title-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 28px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+/* MAIN IMAGE */
+
+.property-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+
+/* PROPERTY INFORMATION */
+
+.property-information {
+    margin-top: 25px;
+}
+
+.update-property h2 {
+    color: #21867a;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.property-information p {
+    margin: 15px 0;
+}
+
+
+/* EDIT INPUTS */
+
+.property-information input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* DESCRIPTION */
+
+.property-description {
+    margin-top: 30px;
+}
+
+.property-description textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+
+/* AMENITIES */
+
+.property-amenities {
+    margin-top: 30px;
+}
+
+.property-amenities li {
+    margin-bottom: 8px;
+}
+
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* LANDLORD INFORMATION */
+
+.landlord-contact {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+
+/* BUTTONS */
+
+.update-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.update-buttons button,
+.update-buttons a {
+    padding: 10px 20px;
+    background-color: #21867a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.update-buttons button:hover,
+.update-buttons a:hover {
+    background-color: #17665d;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .update-property {
+        width: 90%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .update-property {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .property-image {
+        height: 250px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title-input {
+        font-size: 22px;
+    }
+
+    .update-buttons {
+        flex-direction: column;
+    }
+
+    .update-buttons button,
+    .update-buttons a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
