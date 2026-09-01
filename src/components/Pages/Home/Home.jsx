@@ -94,6 +94,10 @@ export default function Home() {
 
       <section className="search-section">
         <h2>Find your Perfect Rental Home </h2>
+        <p>
+          Browse comfortable and affordable rental homes and find a place that
+          fits your needs.
+        </p>
         {/* Search and filters */}
         <div className="filters">
           <select
@@ -213,6 +217,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="view">
         <h2>Ready to Find your New Home?</h2>
         <p> Explore available rental properties today</p>

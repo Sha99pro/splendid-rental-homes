@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { applications } from "../../../Data/Applications";
 import "./ApplicationForm.css";
 
 export default function ApplicationForm() {
