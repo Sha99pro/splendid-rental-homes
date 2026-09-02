@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { properties } from "../Properties/Properties";
-
+const homeimg1 = `${import.meta.env.BASE_URL}homeSectionImages/img1.jpeg`;
+const homeimg2 = `${import.meta.env.BASE_URL}homeSectionImages/img2.jpeg`;
+const homeimg3 = `${import.meta.env.BASE_URL}homeSectionImages/img3.jpeg`;
 import "./Home.css";
-
 const slides = [
   {
     image:
@@ -22,7 +23,6 @@ const slides = [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
   },
 ];
-
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [location, setLocation] = useState("");
@@ -30,8 +30,8 @@ export default function Home() {
   const [homeType, setHomeType] = useState("");
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("");
-
   /*setting images effects with timer*/
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((currentSlide) => {
@@ -91,19 +91,19 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       <section className="search-section">
         <h2>Find your Perfect Rental Home </h2>
         <p>
           Browse comfortable and affordable rental homes and find a place that
           fits your needs.
         </p>
-        {/* Search and filters */}
+        
+        {/*search and filter */}
         <div className="filters">
           <select
             value={location}
             onChange={(event) => setLocation(event.target.value)}
-          >
+            >
             <option>All Locations</option>
             <option>Lake Saint Louis, MO</option>
             <option>Wentzville, MO</option>
@@ -201,17 +201,17 @@ export default function Home() {
         <h2>Why choose Splendid Rental Homes</h2>
         <div className="feature-grid">
           <div className="feature-card">
-            <img src="/homeSectionImages/img1.jpeg" alt="Comfortable home" />
+            <img src={homeimg1} alt="Comfortable home" />
             <h3>Comfortable Homes</h3>
             <p>Simple homes designed for comfortable family living</p>
           </div>
           <div className="feature-card">
-            <img src="/homeSectionImages/img2.jpeg" alt="Comfortable home" />
+            <img src={homeimg2} alt="Comfortable home" />
             <h3>Great Locations</h3>
             <p>Find homes in peaceful Missouri communities</p>
           </div>
           <div className="feature-card">
-            <img src="/homeSectionImages/img3.jpeg" alt="Comfortable home" />
+            <img src={homeimg3} alt="Comfortable home" />
             <h3>Easy Renting</h3>
             <p>View properties and apply online easily</p>
           </div>

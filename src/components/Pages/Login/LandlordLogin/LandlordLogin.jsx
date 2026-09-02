@@ -15,7 +15,7 @@ export default function LandlordLogin() {
     const savedEmail = localStorage.getItem("email");
     const savedPassword = localStorage.getItem("password");
     const savedRole = localStorage.getItem("role");
-
+     {/*conditional rendering based on details given*/}
     if (!email || !password) {
       setMessage("Please enter your email and password.");
     }

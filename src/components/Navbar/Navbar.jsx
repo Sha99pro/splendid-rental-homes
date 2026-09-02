@@ -3,20 +3,16 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
+const brandLogo = `${import.meta.env.BASE_URL}homeSectionImages/brandLogo.jpg`;
 export default function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <nav className="navbar">
       <div className="brand">
         {/*brand logo*/}
-        <img
-          className="brand-logo"
-          src="/homeSectionImages/brandLogo.jpg"
-          alt="Home Logo"
-        />
+        <img className="brand-logo" src={brandLogo} alt="Home Logo" />
         {/*brand-name*/}
         <div className="brand-text">
           <span>
@@ -25,12 +21,10 @@ export default function Navbar() {
           <small>Find a place to call Home</small>
         </div>
       </div>
-
       {/*Hamburger button*/}
       <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
       </button>
-
       {/*Navigation links*/}
       <div className={menuOpen ? "nav-ink show" : "nav-links"}>
         <Link to="/">Home</Link>
