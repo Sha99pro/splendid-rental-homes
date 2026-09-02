@@ -31,7 +31,7 @@ export default function TenantDashboard() {
       <section className="dashboard-section">
         <h2>My Applications</h2>
          {/*application details table*/}
-        <table className="applications-table">
+        <table className="tenant-dashboard-table">
           <thead>
             <tr>
               <th>PROPERTY</th>
