@@ -28,6 +28,10 @@ export default function Signup() {
       setMessage("Passwords do not match");
       return;
     }
+    if(!role){
+      setMessage("Please select a role");
+      return;
+    }
      {/*create localstorage to save the details(email id, password and role*/}
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);

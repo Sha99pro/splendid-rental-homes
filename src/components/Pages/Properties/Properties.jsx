@@ -600,7 +600,7 @@ export default function Properties() {
   return (
     <main className="propeties-page">
       <section className="properties-header">
-        <h1>Find your Perfect Rental Home</h1>
+        <h1>Find your perfect rental home</h1>
 
         <p> Find comfortable homes in peaceful Missouri neighborhoods. </p>
       </section>
@@ -611,11 +611,11 @@ export default function Properties() {
           value={location}
           onChange={(event) => setLocation(event.target.value)}
         >
-          <option>All Locations</option>
-          <option>Lake Saint Louis, MO</option>
-          <option>Wentzville, MO</option>
-          <option>O'fallon, MO</option>
-          <option>Saint Peters, MO</option>
+          <option value="All">All Locations</option>
+          <option value="Lake Saint Louis, MO">Lake Saint Louis, MO</option>
+          <option value="Wentzville, MO">Wentzville, MO</option>
+          <option value="O'fallon, MO">O'fallon, MO</option>
+          <option value="Saint Peters, MO">Saint Peters, MO</option>
         </select>
 
         <select value={rent} onChange={(event) => setRent(event.target.value)}>

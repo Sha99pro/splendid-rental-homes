@@ -18,6 +18,7 @@ export default function LandlordLogin() {
      {/*conditional rendering based on details given*/}
     if (!email || !password) {
       setMessage("Please enter your email and password.");
+      return;
     }
 
     if (email !== savedEmail) {
@@ -32,6 +33,7 @@ export default function LandlordLogin() {
 
     if (savedRole !== "landlord") {
       setMessage("❌ This is not a landlord account");
+      return;
     }
 
     navigate("/landlord-dashboard");
