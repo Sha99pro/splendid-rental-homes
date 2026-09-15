@@ -92,7 +92,7 @@ export default function Home() {
         </div>
       </section>
       <section className="search-section">
-        <h2>Find your Perfect Rental Home </h2>
+        <h2>Find your perfect rental home </h2>
         <p>
           Browse comfortable and affordable rental homes and find a place that
           fits your needs.
@@ -104,11 +104,11 @@ export default function Home() {
             value={location}
             onChange={(event) => setLocation(event.target.value)}
             >
-            <option>All Locations</option>
-            <option>Lake Saint Louis, MO</option>
-            <option>Wentzville, MO</option>
-            <option>O'fallon, MO</option>
-            <option>Saint Peters, MO</option>
+            <option value="All">All Locations</option>
+            <option value="Lake Saint Louis, MO">Lake Saint Louis, MO</option>
+            <option value="Wentzville, MO">Wentzville, MO</option>
+            <option value="O'fallon, MO">O'fallon, MO</option>
+            <option value="Saint Peters, MO">Saint Peters, MO</option>
           </select>
 
           <select
@@ -198,7 +198,7 @@ export default function Home() {
 
       {/* Home page Introduction */}
       <section className="features">
-        <h2>Why choose Splendid Rental Homes</h2>
+        <h2>Why Choose Splendid Rental Homes</h2>
         <div className="feature-grid">
           <div className="feature-card">
             <img src={homeimg1} alt="Comfortable home" />
@@ -219,7 +219,7 @@ export default function Home() {
       </section>
 
       <section className="view">
-        <h2>Ready to Find your New Home?</h2>
+        <h2>Ready to find your new home?</h2>
         <p> Explore available rental properties today</p>
 
         <Link to="/properties">

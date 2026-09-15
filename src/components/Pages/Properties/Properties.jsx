@@ -1,16 +1,16 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState } from "react";
 import PropertyCard from "../PropertyCard/PropertyCard";
 import "./Properties.css";
 
-
 export const properties = [
   {
     id: 1,
-    title: "Cozy Townhome",
-    city: "O'Fallon, MO",
-    address: "115 Cobble Rd O'Fallon, MO 63366",
+    title: "Single Family Home",
+    city: "O'fallon, MO",
+    address: "115 Cobble Rd O'fallon, MO 63366",
     rent: 1850,
-    type: "Single Family Home",
+    type: "Townhome",
     bedrooms: 3,
     bathrooms: 2,
     sqft: 1450,
@@ -253,7 +253,7 @@ export const properties = [
       `${import.meta.env.BASE_URL}images/house7/8.jpg`,
     ],
     description:
-      "Comfortable apartment community offering multiple floor plans with convenient access to shopping, dining, and major roads.",
+      "Comfortable housing community offering multiple floor plans with convenient access to shopping, dining, and major roads.",
     amenities: [
       "Swimming Pool",
       "Fitness Center",
@@ -308,7 +308,7 @@ export const properties = [
   {
     id: 9,
     title: "Family Home",
-    city: " Wentzville, MO",
+    city: "Wentzville, MO",
     address: "124 Granite Way  Wentzville, MO 63367",
     rent: 2100,
     type: "Single Family Home",
@@ -383,7 +383,7 @@ export const properties = [
   {
     id: 11,
     title: "Family Home",
-    city: " Lake saint louis, MO",
+    city: "Lake Saint Louis, MO",
     address: "3237-3 Rue Royale St Lake saint louis, MO 63367",
     rent: 1350,
     type: "Apartment",
@@ -419,7 +419,7 @@ export const properties = [
   {
     id: 12,
     title: "Family Home",
-    city: "Lake saint louis, MO",
+    city: "Lake Saint Louis, MO",
     address: "119 Carlton Point Dr Lake saint louis, MO 63367",
     rent: 1750,
     type: "Condo",
@@ -454,7 +454,7 @@ export const properties = [
   {
     id: 13,
     title: "Family Home",
-    city: " Lake Saint Louis, MO",
+    city: "Lake Saint Louis, MO",
     address: "101 Lemon Dr Lake Saint Louis, MO 63367",
     rent: 1800,
     type: "Single Family Home",
@@ -490,7 +490,7 @@ export const properties = [
   {
     id: 14,
     title: "Family Home",
-    city: " Lake Saint Louis, MO 63367",
+    city: "Lake Saint Louis, MO",
     address: "1000 Centennial Club Dr Lake Saint Louis, MO 63367",
     rent: 1350,
     type: "Townhome",
@@ -560,8 +560,15 @@ export const properties = [
   },
 ];
 
+const RENT_FILTER = Object.freeze({
+  ALL: "All",
+  UNDER_1800: "Under $1,800",
+  FROM_1800_To_2000: "$1,800-$2,000",
+  OVER_2000: "Over $2,000",
+});
+
 export default function Properties() {
-  const [rent, setRent] = useState("All");
+  const [rent, setRent] = useState(RENT_FILTER.ALL);
   const [homeType, setHomeType] = useState("All");
   const [bedrooms, setBedrooms] = useState("All");
   const [bathrooms, setBathrooms] = useState("All");
@@ -569,15 +576,15 @@ export default function Properties() {
 
   const filteredProperties = properties.filter((property) => {
     let matchesRent = true;
-    if (rent === "Under $1,700") {
-      matchesRent = property.rent < 1700;
+    if (rent === RENT_FILTER.UNDER_1800) {
+      matchesRent = property.rent < 1800;
     }
 
-    if (rent === "$1,700 -$2,000") {
-      matchesRent = property.rent >= 1700 && property.rent <= 2000;
+    if (rent === RENT_FILTER.FROM_1800_To_2000) {
+      matchesRent = property.rent >= 1800 && property.rent <= 2000;
     }
 
-    if (rent === "Over $2,000") {
+    if (rent === RENT_FILTER.OVER_2000) {
       matchesRent = property.rent > 2000;
     }
 
@@ -598,9 +605,9 @@ export default function Properties() {
   });
 
   return (
-    <main className="propeties-page">
+    <main className="properties-page">
       <section className="properties-header">
-        <h1>Find your Perfect Rental Home</h1>
+        <h1>Find your perfect rental home</h1>
 
         <p> Find comfortable homes in peaceful Missouri neighborhoods. </p>
       </section>
@@ -611,18 +618,18 @@ export default function Properties() {
           value={location}
           onChange={(event) => setLocation(event.target.value)}
         >
-          <option>All Locations</option>
-          <option>Lake Saint Louis, MO</option>
-          <option>Wentzville, MO</option>
-          <option>O'fallon, MO</option>
-          <option>Saint Peters, MO</option>
+          <option value="All">All Locations</option>
+          <option value="Lake Saint Louis, MO">Lake Saint Louis, MO</option>
+          <option value="Wentzville, MO">Wentzville, MO</option>
+          <option value="O'fallon, MO">O'fallon, MO</option>
+          <option value="Saint Peters, MO">Saint Peters, MO</option>
         </select>
 
         <select value={rent} onChange={(event) => setRent(event.target.value)}>
-          <option value="All">Filter by Rent</option>
-          <option value="Under $1,700">Under $1,700</option>
-          <option value="$1,700-$2,000">$1,700-$2,000</option>
-          <option value="Over $2,000">Over $2,000</option>
+          <option value={RENT_FILTER.ALL}>Filter by Rent</option>
+          <option value={RENT_FILTER.UNDER_1800}>Under $1,800</option>
+          <option value={RENT_FILTER.FROM_1800_To_2000}>$1,800-$2,000</option>
+          <option value={RENT_FILTER.OVER_2000}>Over $2,000</option>
         </select>
 
         <select
